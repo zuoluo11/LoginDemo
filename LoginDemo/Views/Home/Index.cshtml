@@ -45,6 +45,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="../../assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico" />
+   
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -63,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN LOGIN -->
     <div class="content">
         <!-- BEGIN LOGIN FORM -->
-        <form class="login-form" action="index.html" method="post">
+        <form class="login-form">
             <h3 class="form-title">登录</h3>
             <div class="alert alert-danger display-hide">
                 <button class="close" data-close="alert"></button>
@@ -81,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password" />
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn btn-success uppercase">登录</button>
+                <button id="btnLogin" class="btn btn-success uppercase">登录</button>
                 <label class="rememberme check">
                     <input type="checkbox" name="remember" value="1" />记住密码
                 </label>
@@ -418,8 +419,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
             </div>
             <div class="form-actions">
-                <button type="button" id="register-back-btn" class="btn btn-default">Back</button>
-                <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">Submit</button>
+                <button type="button" id="register-back-btn" class="btn btn-default">返回</button>
+                <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">提交</button>
             </div>
         </form>
         <!-- END REGISTRATION FORM -->

@@ -1,0 +1,6 @@
+E:\pr\LoginDemo\LoginDemo\TY.Service\bin\Debug\TY.Service.dll
+E:\pr\LoginDemo\LoginDemo\TY.Service\bin\Debug\TY.Service.pdb
+E:\pr\LoginDemo\LoginDemo\TY.Service\bin\Debug\CYQ.Data.dll
+E:\pr\LoginDemo\LoginDemo\TY.Service\obj\Debug\TY.Service.csprojResolveAssemblyReference.cache
+E:\pr\LoginDemo\LoginDemo\TY.Service\obj\Debug\TY.Service.dll
+E:\pr\LoginDemo\LoginDemo\TY.Service\obj\Debug\TY.Service.pdb

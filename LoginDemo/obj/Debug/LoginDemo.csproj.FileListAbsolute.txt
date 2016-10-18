@@ -90,3 +90,6 @@ E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\zh-Hant\System.Spatial.resources.dll
 E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.csprojResolveAssemblyReference.cache
 E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.dll
 E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.pdb
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.dll
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Service.dll
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Service.pdb

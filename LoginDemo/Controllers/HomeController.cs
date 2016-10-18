@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CYQ.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TY.Service;
 
 namespace LoginDemo.Controllers
 {
@@ -10,11 +12,23 @@ namespace LoginDemo.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 
-     
+        public ActionResult Login(string username, string password)
+        {
+            string userId = "1";
+            MAction action = new MAction(TableNames.Base_User);
+            action.SetPara(Base_User.UserID, userId, System.Data.DbType.String);
+            string where = "UserID=@UserID";
+            action.Fill(where);
+            string full = action.Get<string>(Base_User.FullName);
+            return Content(full);
+        }
+        public ActionResult MainIndex()
+        {
+            return View();
+        }
+
     }
 }
