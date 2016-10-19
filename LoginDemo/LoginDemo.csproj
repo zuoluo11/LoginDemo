@@ -39,9 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CYQ.Data">
-      <HintPath>..\TY.Service\DLL\CYQ.Data.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -185,6 +182,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -4509,6 +4507,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\MainIndex.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4519,9 +4518,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TY.Service\TY.Service.csproj">
-      <Project>{ff3df265-3c9a-4781-9685-e1149ccc775c}</Project>
-      <Name>TY.Service</Name>
+    <ProjectReference Include="..\..\..\CYQdata\cyqdata\CYQ.Data.csproj">
+      <Project>{bd5ccc87-278f-4feb-ad23-157fcba9ffa1}</Project>
+      <Name>CYQ.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TY.Entity\TY.Entity.csproj">
+      <Project>{131c2416-b816-4a1c-be96-1c074be0eeab}</Project>
+      <Name>TY.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

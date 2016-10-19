@@ -91,5 +91,7 @@ E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.csprojResolveAssemblyRef
 E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.dll
 E:\pr\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.pdb
 E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.dll
-E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Service.dll
-E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Service.pdb
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Entity.dll
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Entity.pdb
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.pdb
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.xml

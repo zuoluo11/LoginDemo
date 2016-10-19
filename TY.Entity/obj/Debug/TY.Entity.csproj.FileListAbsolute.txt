@@ -1,0 +1,5 @@
+E:\pr\LoginDemo\LoginDemo\TY.Entity\obj\Debug\TY.Entity.csprojResolveAssemblyReference.cache
+E:\pr\LoginDemo\LoginDemo\TY.Entity\bin\Debug\TY.Entity.dll
+E:\pr\LoginDemo\LoginDemo\TY.Entity\bin\Debug\TY.Entity.pdb
+E:\pr\LoginDemo\LoginDemo\TY.Entity\obj\Debug\TY.Entity.dll
+E:\pr\LoginDemo\LoginDemo\TY.Entity\obj\Debug\TY.Entity.pdb

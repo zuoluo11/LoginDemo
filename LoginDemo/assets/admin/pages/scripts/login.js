@@ -49,8 +49,13 @@ var Login = function () {
                 //form.submit(); // form validation success, call ajax form submit
                 var userName = $("input[name='username']").val();
                 var passWord = $("input[name='password']").val();
-                $.post("/Home/Login", { userName: userName, passWord: passWord }, function (data) {
-                    window.location.href = "/Home/MainIndex";
+                $.post("/Login/Login", { userName: userName, passWord: passWord }, function (data) {
+                    if (data == "0") {
+                        alert("³ö´í");
+                    } else {
+                        window.location.href = "/Home/Index";
+                    }
+
                 });
             }
         });
@@ -151,6 +156,9 @@ var Login = function () {
                 $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });
         }
+        //action="index.html" method="post"
+
+        $(".register-form").attr("action", "Login/Register").attr("method", "post");
 
         $('.register-form').validate({
             errorElement: 'span', //default input error message container
@@ -167,9 +175,6 @@ var Login = function () {
                     email: true
                 },
                 address: {
-                    required: true
-                },
-                city: {
                     required: true
                 },
                 country: {
