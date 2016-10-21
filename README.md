@@ -1,6 +1,6 @@
 # 我的练习项目
 
-标签（空格分隔）： ASP.Net MVC CYQ.data
+标签（空格分隔）： ASP.Net MVC、 CYQ.data
 
 ---
 
