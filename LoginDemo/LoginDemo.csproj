@@ -4508,6 +4508,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\MainIndex.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Repassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,106 @@
+http://localhost:43258/Login/Login
+Referer:http://localhost:43258/?username=test&password=321
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:31:50 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/?username=test&password=321
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:32:05 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:32:43 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:34:01 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:38:39 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:38:45 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:38:52 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:40:05 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:40:27 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:41:35 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:49:24 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/?username=&password=&remember=1
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:51:50 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/?username=&password=&remember=1
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:52:33 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:52:40 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+V5.6.6.7 Record On : 2016/10/21 15:53:37 http://localhost:43258/Login/Login
+Referer:http://localhost:43258/
+------------------------
+
+错误超过5次、IP所在城市
