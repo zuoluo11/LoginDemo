@@ -20,10 +20,10 @@ var Login = function () {
 
             messages: {
                 username: {
-                    required: "Username is required."
+                    required: "用户名必填."
                 },
                 password: {
-                    required: "Password is required."
+                    required: "密码必填."
                 }
             },
 
@@ -85,7 +85,7 @@ var Login = function () {
 
             messages: {
                 email: {
-                    required: "Email is required."
+                    required: "Email 是必填字段."
                 }
             },
 
@@ -108,14 +108,35 @@ var Login = function () {
             },
 
             submitHandler: function (form) {
-                form.submit();
+                //form.submit();
+                $('.forget-form .btn-success').trigger(onclick);
             }
+        });
+        //$(".forget-form").attr("action", "Login/SendEmail").attr("method", "post");
+
+        $('.forget-form .btn-success').click(function () {
+            if ($(".forget-form").valid()) {
+                $.ajax({
+                    url: "Login/SendEmail",
+                    type: "post",
+                    data: $(".forget-form").serialize(),
+                    success: function (result) {
+                        alert(result);
+                        window.location = "Home/Index";
+                    },
+                    error: function (result) {
+                        alert(result);
+                    }
+                });
+            }
+            return false;
         });
 
         $('.forget-form input').keypress(function (e) {
             if (e.which == 13) {
                 if ($('.forget-form').validate().form()) {
-                    $('.forget-form').submit();
+                    //$('.forget-form').submit();
+                    $('.forget-form .btn-success').trigger(onclick);
                 }
                 return false;
             }
@@ -156,7 +177,6 @@ var Login = function () {
                 $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });
         }
-        //action="index.html" method="post"
 
         $(".register-form").attr("action", "Login/Register").attr("method", "post");
 
@@ -198,7 +218,7 @@ var Login = function () {
 
             messages: { // custom messages for radio buttons and checkboxes
                 tnc: {
-                    required: "Please accept TNC first."
+                    required: "请接收服务条款"
                 }
             },
 
