@@ -95,3 +95,5 @@ E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Entity.dll
 E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.Entity.pdb
 E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.pdb
 E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\CYQ.Data.xml
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.DataTables.dll
+E:\pr\LoginDemo\LoginDemo\LoginDemo\bin\TY.DataTables.pdb

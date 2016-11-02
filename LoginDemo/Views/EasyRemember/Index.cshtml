@@ -94,20 +94,18 @@
                                 AlertDate1
                             </th>
                             <th>
-                                AlertDate2
-                            </th>
-                            <th>
-                                AlertDate3
-                            </th>
-                            <th>
-                                AlertDate4
-                            </th>
-                            <th>
-                                AlertDate5
-                            </th>
-                            <th>
-                                Delete
-                            </th>
+                                    AlertDate2
+                                </th>
+                                <th>
+                                    AlertDate3
+                                </th>
+                                <th>
+                                    AlertDate4
+                                </th>
+                                <th>
+                                    AlertDate5
+                                </th>
+
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -122,16 +120,18 @@
 <script>
     $(function () {
         bindTable();
-       
+
 
         $('#formRemember').submit(function () {
             $.ajax({
+                bRetrieve: true,
                 url: "/EasyRemember/SubmitForm",
                 type: "post",
                 data: $("#formRemember").serialize(),
                 success: function (result) {
                     if (result == "0") {
                         alert("出错");
+                        $('#formRemember').dataTable().fnDestroy();
                     } else {
                         $("#formRemember")[0].reset();
                         bindTable();
@@ -140,12 +140,38 @@
             });
             return false;
         });
-        
 
-   
+
+
     });
     function bindTable() {
-        
+        $("#tabRemember").dataTable({
+            "bDestroy": true,
+            processing: true,
+            serverSide: true,
+            "ajax": {
+                "url": "@Url.Action("GetDataList1")",
+                //"data": function (data) {
+                //    //添加额外参数
+                //    //data.Name = "keyword";
+                //    return JSON.stringify(data);
+                //},
+                "type": "POST"
+            },
+            "columns": [
+                       { "data": "ID" },
+                       { "data": "InfoName" },
+                       { "data": "InfoContent" },
+                       { "data": "CreateDate" },
+                       { "data": "AlertDate1" },
+                       { "data": "AlertDate2" },
+                       { "data": "AlertDate3" },
+                       { "data": "AlertDate4" },
+                       { "data": "AlertDate5" }
+            ]
+        });
+
+        return;
         $.ajax({
             url: "/EasyRemember/GetDataList",
             type: "post",
@@ -154,7 +180,7 @@
                 $("#tabRemember tbody").html("");
                 var list = JSON.parse(result);
                 for (var i = 0; i < list.rowcount; i++) {
-                    var tr = $("<tr id='tr"+list.rows[i].ID+"'>"
+                    var tr = $("<tr id='tr" + list.rows[i].ID + "'>"
                       + "<td>" + list.rows[i].ID + "</td>"
                       + "<td>" + list.rows[i].InfoName + "</td>"
                       + "<td>" + list.rows[i].InfoContent + "</td>"
@@ -164,13 +190,13 @@
                       + "<td>" + '<span class="label label-sm label-danger">' + list.rows[i].AlertDate3 + '</span>' + "</td>"
                       + "<td>" + list.rows[i].AlertDate4 + "</td>"
                       + "<td>" + list.rows[i].AlertDate5 + "</td>"
-                  
+
                       + "<td>"
                       + '<a class="btn-small red" onclick="deleteOne(' + list.rows[i].ID + ')"><i class="fa fa-times"></i>Delete</a><br/>'
                       + '<a class="btn-small red" onclick="editOne(' + list.rows[i].ID + ')"><i class="fa fa-edit"></i>Edit</a>'
                       + "</td>"
                       + "</tr>");
-                   
+
                     tr.appendTo($("#tabRemember tbody"));
                 }
                 $("#tabRemember").dataTable();

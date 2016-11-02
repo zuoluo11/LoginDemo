@@ -1,0 +1,81 @@
+﻿<script src="~/assets/global/plugins/carousel-owl-carousel/assets/js/jquery-1.9.1.min.js"></script>
+<script src="~/assets/global/plugins/datatables/media/js/jquery.dataTables.js"></script>
+<section>
+    <div class="row" style="margin-top:50px;">
+        <div class="col-lg-offset-2 col-lg-8">
+            <div class="form-group col-lg-12">
+                <div class="col-lg-3">
+                    <input type="text" placeholder="名称" id="name" class="form-control">
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="描述" id="desc" class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" placeholder="X" id="x" class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" placeholder="Y" id="y" class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <button id="hehe" class="btn btn-warning pull-right" type="button"><i class="fa fa-search"></i> 搜 索</button>
+                </div>
+            </div>
+            <table id="area" class="table table-striped table-bordered" data-page-length="10" data-order="[[0,&quot;asc&quot;]]" width="100%">
+                <thead>
+                    <tr>
+                        <th data-data="Id" data-visible="false">Id</th>
+                        <th data-orderable="false"><input type="checkbox" id="checkbox-all" /></th>
+                        <th data-data="Name">名称</th>
+                        <th data-data="Description" data-orderable="false">描述</th>
+                        <th data-data="PointX">坐标</th>
+                        <th data-orderable="false">操作</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</section>
+<script>
+    $(function () {
+        //console.log(moment().format('LL'));
+        var areaTable = $('#area').dataTable({
+            "ajax": {
+                "url": "@Url.Action("GetDataList1")",
+                "data": function (data) {
+                    //添加额外的参数传给服务器
+                    data.Name = $("#name").val();
+                    data.Description = $("#desc").val();
+                    data.X = $("#x").val();
+                    data.Y = $("#y").val();
+                    return JSON.stringify(data);
+                }
+            },
+            "columnDefs": [{
+                "targets": 1,
+                "width": "15px",
+                render: function (data, type, full, meta) {
+                    return '<input type="checkbox" id="checkbox-all-' + full.Id + '" value="' + full.Id + '" />';
+                }
+            },
+            {
+                "targets": 4,
+                render: function (data, type, full, meta) {
+                    return full.PointX + "," + full.PointY;
+                }
+            },
+            {
+                "targets": -1,
+                "width": "100px",
+                render: function (data, type, full, meta) {
+                    return '<a class="btn btn-sm btn-info" href="javascript:;">设置<i class="fa fa-cogs"></i></a>  ' +
+                        '<a class="btn btn-sm btn-info" href="javascript:;">删除<i class="fa fa-trash"></i></a>';
+                }
+            }]
+        });
+
+        $("#hehe").click(function () {
+            //areaTable.api().ajax.reload();
+        });
+    });
+
+</script>

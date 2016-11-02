@@ -1,0 +1,6 @@
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\bin\Debug\TY.DataTables.dll
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\bin\Debug\TY.DataTables.pdb
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\bin\Debug\Newtonsoft.Json.dll
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\obj\Debug\TY.DataTables.csprojResolveAssemblyReference.cache
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\obj\Debug\TY.DataTables.dll
+E:\pr\LoginDemo\LoginDemo\TY.DataTables\obj\Debug\TY.DataTables.pdb

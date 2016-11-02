@@ -181,8 +181,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AreaQuery.cs" />
+    <Compile Include="Controllers\DataTablesParameters.cs" />
+    <Compile Include="Controllers\DataTablesResult.cs" />
     <Compile Include="Controllers\EasyRememberController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfoModel.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -4511,6 +4515,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Repassword.cshtml" />
     <Content Include="Views\EasyRemember\Index.cshtml" />
+    <Content Include="Views\EasyRemember\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4524,6 +4529,10 @@
     <ProjectReference Include="..\..\..\CYQdata\cyqdata\CYQ.Data.csproj">
       <Project>{bd5ccc87-278f-4feb-ad23-157fcba9ffa1}</Project>
       <Name>CYQ.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TY.DataTables\TY.DataTables.csproj">
+      <Project>{2efc27da-9adb-4f46-94bd-fd021bad2cc3}</Project>
+      <Name>TY.DataTables</Name>
     </ProjectReference>
     <ProjectReference Include="..\TY.Entity\TY.Entity.csproj">
       <Project>{131c2416-b816-4a1c-be96-1c074be0eeab}</Project>
