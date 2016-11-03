@@ -1,0 +1,36 @@
+http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+V5.6.6.7 Record On : 2016/11/3 14:26:17 http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+
+[LogConnIsEmpty]:MsSql Call Function::ExeDataReader():'-' 附近有语法错误。<br>MsSql.LoginDemo.SQL: <br>select top -1 * from [Base_MemoryInfo] where 1=1 order by CreateDate desc<br>ExeDataReader():'-' 附近有语法错误。<br>http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+V5.6.6.7 Record On : 2016/11/3 14:28:22 http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+
+[LogConnIsEmpty]:MsSql Call Function::ExeDataReader():'-' 附近有语法错误。<br>MsSql.LoginDemo.SQL: <br>select top -1 * from [Base_MemoryInfo] where 1=1 order by CreateDate desc<br>ExeDataReader():'-' 附近有语法错误。<br>http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+V5.6.6.7 Record On : 2016/11/3 14:28:24 http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+
+[LogConnIsEmpty]:MsSql Call Function::ExeDataReader():'-' 附近有语法错误。<br>MsSql.LoginDemo.SQL: <br>select top -1 * from [Base_MemoryInfo] where 1=1 order by CreateDate desc<br>ExeDataReader():'-' 附近有语法错误。<br>http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+V5.6.6.7 Record On : 2016/11/3 14:28:27 http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+
+[LogConnIsEmpty]:MsSql Call Function::ExeDataReader():'-' 附近有语法错误。<br>MsSql.LoginDemo.SQL: <br>select top -1 * from [Base_MemoryInfo] where 1=1 order by CreateDate desc<br>ExeDataReader():'-' 附近有语法错误。<br>http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+V5.6.6.7 Record On : 2016/11/3 14:28:27 http://localhost:43258/EasyRemember/GetDataList1
+Referer:http://localhost:43258/EasyRemember/Index
+------------------------
+
+[LogConnIsEmpty]:MsSql Call Function::ExeDataReader():'-' 附近有语法错误。<br>MsSql.LoginDemo.SQL: <br>select top -1 * from [Base_MemoryInfo] where 1=1 order by CreateDate desc<br>ExeDataReader():'-' 附近有语法错误。<br>

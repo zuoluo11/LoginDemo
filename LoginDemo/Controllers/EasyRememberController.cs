@@ -75,10 +75,10 @@ namespace LoginDemo.Controllers
         /// <returns></returns>
         public ActionResult GetDataList1(AreaQuery query)
         {
-            
+            string name = query.Name;
             MAction action = new MAction("Base_MemoryInfo");
-            int count=action.Select().Rows.Count;
-            MDataTable table = action.Select((query.start / query.length)+1, query.length);
+            int count=0;
+            MDataTable table = action.Select((query.start / query.length) + 1, query.length, "InfoName like '%" + name + "%'order by CreateDate desc", out count);
             List<InfoModel> list=table.ToList<InfoModel>();
             return DataTablesJson(query.draw, count, count, list);
         }

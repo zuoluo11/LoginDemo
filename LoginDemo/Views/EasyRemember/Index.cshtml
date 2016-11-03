@@ -3,8 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
 <!-- BEGIN PAGE CONTENT-->
 <div class="row">
     <div class="col-md-12">
@@ -28,7 +26,6 @@
             <div class="portlet-body form">
                 <form role="form" id="formRemember">
                     <div class="form-body">
-
                         <div class="form-group">
                             <label>信息</label>
                             <div class="input-icon">
@@ -50,9 +47,7 @@
             </div>
         </div>
         <!-- END SAMPLE FORM PORTLET-->
-
     </div>
-
 
 </div>
 <div class="row">
@@ -94,18 +89,24 @@
                                 AlertDate1
                             </th>
                             <th>
-                                    AlertDate2
-                                </th>
-                                <th>
-                                    AlertDate3
-                                </th>
-                                <th>
-                                    AlertDate4
-                                </th>
-                                <th>
-                                    AlertDate5
-                                </th>
+                                AlertDate2
+                            </th>
+                            <th>
+                                AlertDate3
+                            </th>
+                            <th>
+                                AlertDate4
+                            </th>
+                            <th>
+                                AlertDate5
+                            </th>
+                            <th>
+                                编辑
+                            </th>
 
+                            <th>
+                                删除
+                            </th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -144,19 +145,22 @@
 
 
     });
+    var table;
     function bindTable() {
-        $("#tabRemember").dataTable({
+        table = $("#tabRemember").dataTable({
+            "aLengthMenu": [[ 5], [5]],//分页设置
             "bDestroy": true,
-            processing: true,
+            processing: false,//显示处理状态
             serverSide: true,
             "ajax": {
                 "url": "@Url.Action("GetDataList1")",
-                //"data": function (data) {
-                //    //添加额外参数
-                //    //data.Name = "keyword";
-                //    return JSON.stringify(data);
-                //},
-                "type": "POST"
+                "data": function (data) {
+                    //添加额外参数
+                    data.Name = $(".dataTables_filter input").val();
+                    return JSON.stringify(data);
+                },
+                "type": "POST",
+                "contentType": "application/json; charset=utf-8"//必须有编码模式，否则容易出错
             },
             "columns": [
                        { "data": "ID" },
@@ -167,57 +171,86 @@
                        { "data": "AlertDate2" },
                        { "data": "AlertDate3" },
                        { "data": "AlertDate4" },
-                       { "data": "AlertDate5" }
-            ]
-        });
-
-        return;
-        $.ajax({
-            url: "/EasyRemember/GetDataList",
-            type: "post",
-            data: "",
-            success: function (result) {
-                $("#tabRemember tbody").html("");
-                var list = JSON.parse(result);
-                for (var i = 0; i < list.rowcount; i++) {
-                    var tr = $("<tr id='tr" + list.rows[i].ID + "'>"
-                      + "<td>" + list.rows[i].ID + "</td>"
-                      + "<td>" + list.rows[i].InfoName + "</td>"
-                      + "<td>" + list.rows[i].InfoContent + "</td>"
-                      + "<td>" + '<span class="label label-sm label-success">' + list.rows[i].CreateDate + '</span>' + "</td>"
-                      + "<td>" + '<span class="label label-sm label-info">' + list.rows[i].AlertDate1 + '</span>' + "</td>"
-                      + "<td>" + '<span class="label label-sm label-warning">' + list.rows[i].AlertDate2 + '</span>' + "</td>"
-                      + "<td>" + '<span class="label label-sm label-danger">' + list.rows[i].AlertDate3 + '</span>' + "</td>"
-                      + "<td>" + list.rows[i].AlertDate4 + "</td>"
-                      + "<td>" + list.rows[i].AlertDate5 + "</td>"
-
-                      + "<td>"
-                      + '<a class="btn-small red" onclick="deleteOne(' + list.rows[i].ID + ')"><i class="fa fa-times"></i>Delete</a><br/>'
-                      + '<a class="btn-small red" onclick="editOne(' + list.rows[i].ID + ')"><i class="fa fa-edit"></i>Edit</a>'
-                      + "</td>"
-                      + "</tr>");
-
-                    tr.appendTo($("#tabRemember tbody"));
+                       { "data": "AlertDate5" },
+                       { "data": "编辑" },
+                       { "data": "删除" }
+            ],
+            "columnDefs": [
+                {
+                    "bVisible": false,
+                    "aTargets": [2]
+                }, {
+                "targets": 3,
+                render: function (data, type, full, meta) {
+                    return data_string(data);
                 }
-                $("#tabRemember").dataTable();
-
-
             },
-            error: function (result) {
-                alert(result);
-            }
+             {
+                 "targets": -2,
+                 "width": "100px",
+                 render: function (data, type, full, meta) {
+                     return '<a class="btn btn-sm btn-info" onclick="getTableContent('+full.ID+')">设置<i class="fa fa-cogs"></i></a>  ';
+                 }
+             },
+             {
+                 
+                 "targets": -1,
+                 "width": "100px",
+                 render: function (data, type, full, meta) {
+                     return '<a class="btn btn-sm btn-info red" onclick="deleteOne('+full.ID+')">删除<i class="fa fa-trash"></i></a>';
+                 }
+             }], language: {
+                 "sProcessing": "处理中...",
+                 "sLengthMenu": "显示 _MENU_ 项结果",
+                 "sZeroRecords": "没有匹配结果",
+                 "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                 "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                 "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                 "sInfoPostFix": "",
+                 "sSearch": "搜索:",
+                 "sUrl": "",
+                 "sEmptyTable": "表中数据为空",
+                 "sLoadingRecords": "载入中...",
+                 "sInfoThousands": ",",
+                 "oPaginate": {
+                     "sFirst": "首页",
+                     "sPrevious": "上页",
+                     "sNext": "下页",
+                     "sLast": "末页"
+                 },
+                 "oAria": {
+                     "sSortAscending": ": 以升序排列此列",
+                     "sSortDescending": ": 以降序排列此列"
+                 }
+             }
         });
 
+       
     }
-    function editOne(id) {
-        var tds = $("#tr" + id).find("td");
-        var infoName = $(tds[1]).html();
-        var infoContent = $(tds[2]).html();
-        $("#formRemember input[name='InfoName']").val(infoName);
-        $("#formRemember input[name='ID']").val(id);
-        $("#formRemember textarea[name='InfoContent']").val(infoContent);
 
+
+    function getTableContent(ID) {
+        
+        var nTrs = table.fnGetNodes();//fnGetNodes获取表格所有行，nTrs[i]表示第i行tr
+       
+        for (var i = 0; i < nTrs.length; i++) {
+           
+             //if($(nTrs[i]).hasClass('selected')){//相当于$(tr)
+            
+                var t = table.fnGetData(nTrs[i]);
+                if (t.ID == ID) {
+                    console.log("aaaaaa:" + t.InfoName);//获取一行第3列数据
+                    $("#formRemember input[name='InfoName']").val(t.InfoName);
+                    $("#formRemember input[name='ID']").val(t.ID);
+                    $("#formRemember textarea[name='InfoContent']").val(t.InfoContent);
+                }
+
+        }
+      
     }
+
+
+   
     function deleteOne(id) {
         $.ajax({
             url: "/EasyRemember/DeleteOne",
@@ -237,8 +270,12 @@
             }
         });
     }
+    function data_string(str) {
+        var d = eval('new ' + str.substr(1, str.length - 2));
+        var ar_date = [d.getFullYear(), d.getMonth() + 1, d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+        for (var i = 0; i < ar_date.length; i++) ar_date[i] = dFormat(ar_date[i]);
+        return ar_date.slice(0, 3).join('-') + ' ' + ar_date.slice(3).join(':');
 
+        function dFormat(i) { return i < 10 ? "0" + i.toString() : i; }
+    }
 </script>
-
-
-
