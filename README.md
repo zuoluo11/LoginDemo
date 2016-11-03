@@ -12,7 +12,9 @@
 
 2、记忆曲线（增、删、改、查）；
 
+
+
 组件内容包括：
 
 1、Bootstrap 模板 metronic_v3.5；
-
+2、Jquery DataTables 显示、分页、搜索、格式化列、国际化
